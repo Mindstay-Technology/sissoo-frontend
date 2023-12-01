@@ -1,4 +1,5 @@
 import React from "react";
+// import Lazy from "./Routes/Lazy";
 // import OtpVerify from "./components/OtpVerify";
 // import RoleSelection from "./components/RoleSelection";
 // import Employee from "./components/Employee";
@@ -8,13 +9,14 @@ import RouteCompo from "./Routes/RouteCompo";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       {/* <OtpVerify /> */}
       {/* <RoleSelection /> */}
       {/* <Employee /> */}
       {/* <SkillsSet /> */}
       <RouteCompo/>
       {/* <RouteCompoo/> */}
+      {/* <Lazy/> */}
     </div>
   );
 }
