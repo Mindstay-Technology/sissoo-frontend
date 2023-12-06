@@ -8,7 +8,7 @@ import './Employee.css';
 import LOGO from '../images/Header_Logo_RS.png';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import "./SkillsSet.css"
 const SkillsSet = () => {
   const [fullName, setFullName] = useState('');
   const [companyName, setCompanyName] = useState('');

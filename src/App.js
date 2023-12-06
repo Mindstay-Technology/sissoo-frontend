@@ -4,7 +4,8 @@ import React from "react";
 // import RoleSelection from "./components/RoleSelection";
 // import Employee from "./components/Employee";
 // import SkillsSet from "./components/SkillsSet";
-import RouteCompo from "./Routes/RouteCompo";
+// import RouteCompo from "./Routes/RouteCompo";
+import Requirements from "./components/Requirements";
 // import RouteCompoo from "./Routes/RouteCompo2";
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
       {/* <RoleSelection /> */}
       {/* <Employee /> */}
       {/* <SkillsSet /> */}
-      <RouteCompo/>
+      {/* <RouteCompo /> */}
+      <Requirements />
       {/* <RouteCompoo/> */}
       {/* <Lazy/> */}
     </div>

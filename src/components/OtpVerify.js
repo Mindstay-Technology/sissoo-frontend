@@ -38,19 +38,22 @@ const OtpVerify = () => {
 
   const handleKeyDown = (e, index) => {
     if (e.key === 'Backspace') {
+      // Prevent the default behavior of the backspace key
+      e.preventDefault();
+  
       // Handle backspace functionality
-      setOtp(prevOtp => {
+      setOtp((prevOtp) => {
         const newOtp = [...prevOtp];
         newOtp[index] = '';
-
+  
         // Move focus to the previous input box on backspace
         if (index > 0) {
-          document.getElementById(`otp-input-${index-1}`).focus();
+          document.getElementById(`otp-input-${index - 1}`).focus();
         } else {
           // If it's the first input box, set focus to the current input
           document.getElementById(`otp-input-${index}`).focus();
         }
-
+  
         return newOtp;
       });
     }
@@ -97,7 +100,8 @@ const OtpVerify = () => {
                 />
               ))}
             </div>
-            <button onClick={()=>{RoleSelection('/selectrole')}}>Verify</button>
+            <button onClick={()=>{RoleSelection('/selectrole')}}>Verify</button> 
+            {/*  */}
             <p>If you haven't received the OTP?</p>
           </div>
           <div className='Carousel'>
