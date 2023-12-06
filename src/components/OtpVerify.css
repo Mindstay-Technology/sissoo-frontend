@@ -94,7 +94,9 @@
     line-height: normal;
     margin: 0;
 }
-
+.resend-line{
+    color: #B9B9B9;
+}
 .Reciever_Align button {
     border-radius: 0.125rem;
     background: #2676C2;
