@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Suspense, lazy } from 'react';
 import "./RouteCompo.css"
 import Bird from "../images/bird.png"
+import { Provider } from 'react-redux';
+import store from '../Redux/Store/Store';
 const Signin = lazy(()=>import('../components/Signin'));
 const SkillsSet = lazy(()=>import('../components/SkillsSet'));
 const Employee = lazy(()=>import('../components/Employee'));
@@ -11,6 +13,7 @@ const OtpVerify = lazy(()=>import('../components/OtpVerify'));
 function RouteCompo() {
   return (
     <div>
+      <Provider store={store}>
         <BrowserRouter>
           <Suspense fallback={<div className='route-lazy-parent'><img src={Bird} alt='imglazy' className='lazy-img'/></div>}>
             <Routes>
@@ -24,7 +27,7 @@ function RouteCompo() {
             </Routes>
             </Suspense>
         </BrowserRouter>
-
+        </Provider>
     </div>
   )
 }

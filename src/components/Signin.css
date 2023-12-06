@@ -113,11 +113,14 @@
 
 }
 #mobileNumber{
-    width: 90%;
+    width: 88%;
     /* background-color: #FFF; */
     border: none;
     padding: 20px 20px;
     font-size: 1.2rem;
+}
+#mobileNumber::placeholder{
+    opacity: 0.5;
 }
 .sigin-otp{
     width: 80%;

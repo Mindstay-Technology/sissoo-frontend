@@ -8,11 +8,18 @@ import './Employee.css';
 import LOGO from '../images/Header_Logo_RS.png';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+<<<<<<< HEAD
 import "./SkillsSet.css"
+=======
+import { setFullName, setCompanyName, setDesignation } from '../Redux/Slice/AuthSlice';
+import { useDispatch, useSelector } from 'react-redux';
+>>>>>>> 42af85c6fa7039c59fd196c142e76c7c6ddc0bcd
 const SkillsSet = () => {
-  const [fullName, setFullName] = useState('');
-  const [companyName, setCompanyName] = useState('');
-  const [designation, setDesignation] = useState('');
+  // const [fullName, setFullName] = useState('');
+  // const [companyName, setCompanyName] = useState('');
+  // const [designation, setDesignation] = useState('');
+  const dispatch = useDispatch()
+  const { fullName, companyName, designation } = useSelector((state)=>state.auth)
   const selectrole = useNavigate()
   const handleSignIn = () => {
     // Handle sign-in logic here
@@ -20,6 +27,9 @@ const SkillsSet = () => {
     console.log('Company Name:', companyName);
     console.log('Designation:', designation);
     // Add your sign-in logic here
+    dispatch(setFullName(''))
+    dispatch(setCompanyName(''))
+    dispatch(setDesignation(''))
   };
 
   return (
@@ -56,17 +66,17 @@ const SkillsSet = () => {
           <form>
             <label>
               Full Name
-              <input type='text' value={fullName} onChange={(e) => setFullName(e.target.value)} placeholder='Enter Full name'/>
+              <input type='text' value={fullName} onChange={(e) => dispatch(setFullName(e.target.value))} placeholder='Enter Full name'/>
             </label>
 
             <label>
               Experience
-              <input type='text' value={companyName} onChange={(e) => setCompanyName(e.target.value)} placeholder='Select Your Experience Level'/>
+              <input type='text' value={companyName} onChange={(e) => dispatch(setCompanyName(e.target.value))} placeholder='Select Your Experience Level'/>
             </label>
 
             <label>
               Skill Set
-              <input type='text' value={designation} onChange={(e) => setDesignation(e.target.value)} placeholder='Enter Your Role'/>
+              <input type='text' value={designation} onChange={(e) => dispatch(setDesignation(e.target.value))} placeholder='Enter Your Role'/>
             </label>
 
             <button type='button' onClick={handleSignIn}>

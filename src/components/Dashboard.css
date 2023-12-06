@@ -1,0 +1,57 @@
+/* DashboardApp.css */
+
+.dashboard-app {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+.sidebar {
+  /* width: 260px; */
+  width: 20%;
+  background-color: #fff;
+  color: #333;
+  /* padding: 20px; */
+  box-shadow: 1px 1px 3px 0px #1111111a;
+  min-height: 100vh;
+  height: auto;
+}
+
+.sidebar-option {
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s, padding 0.3s;
+  color: #535353;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.sidebar-option:hover,
+.sidebar-option.active {
+  background-color: #2676c2;
+  color: #fff;
+}
+.sidebar-option .arrow-icon {
+  margin-right: 10px;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.sidebar-option.active .arrow-icon {
+  opacity: 1;
+  transform: translateX(60px);
+}
+.content {
+  flex: 1;
+  padding: 20px;
+  /* min-width: 0; */
+  width: 70%;
+}
